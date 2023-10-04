@@ -1,0 +1,55 @@
+header {
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  padding: 1em;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+
+  .heading {
+    font-size: 1.6rem;
+    margin: 0;
+    flex-grow: 1;
+    text-align: center;
+    @media screen and (min-width: 400px) {
+      font-size: 2rem;
+    }
+  }
+}
+
+nav {
+  align-self: center;
+  transform: translateY(0.4rem);
+  @media screen and (min-width: 400px) {
+    transform: translateY(0.2rem);
+
+  }
+
+  .link {
+    color: #fff;
+    text-decoration: none;
+
+    .icon {
+      fill: white;
+      width: 1.8rem;
+    }
+  }
+}
+
+main {
+  flex: 1;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  align-items: center;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 1em;
+  margin-top: auto;
+  z-index: 1;
+}

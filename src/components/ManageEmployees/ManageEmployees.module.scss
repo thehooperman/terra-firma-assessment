@@ -1,0 +1,35 @@
+.show {
+  background-color: white;
+  // display: block;
+  width: 100%;
+  // transition: all 0.5s ease-in-out;
+  max-height: 0;
+  margin-bottom: -1rem;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  &__heading {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: black;
+    margin: 0;
+    padding: 0.5rem 1rem;
+    text-align: center;
+  }
+  &.open {
+    border-radius: 0.5rem;
+    max-height: 1000px;
+    transition: max-height 0.3s ease-in;
+    height: fit-content;
+    margin-bottom: 0;
+    padding: 0 1rem 1rem;
+  }
+}
+
+.button {
+  background-color: #a5a5a5;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+}
