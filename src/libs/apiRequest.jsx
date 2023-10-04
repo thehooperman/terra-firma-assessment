@@ -1,5 +1,3 @@
-// TODO: convert to typescript
-
 const apiRequest = async (url = "", optionsObj = undefined, errMsg = "") => {
   try {
     const response = await fetch(url, optionsObj);

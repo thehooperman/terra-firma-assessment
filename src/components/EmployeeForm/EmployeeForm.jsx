@@ -9,10 +9,7 @@ const EmployeeForm = ({
   setShowForm,
   btnLabel,
 }) => {
-  console.log("EmployeeForm newEmployee", newEmployee);
-
   useEffect(() => {
-    console.log("EmployeeForm useEffect employee", employee);
     if (employee) {
       setNewEmployee(employee);
     }
@@ -171,7 +168,6 @@ const EmployeeForm = ({
             className={styles.button}
             type="submit"
             aria-label="Add Employee"
-            // onClick={() => inputRef.current.focus()}
           >
             {btnLabel}
           </button>

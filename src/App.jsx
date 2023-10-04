@@ -23,8 +23,6 @@ function App() {
     },
   });
 
-  console.log("App newEmployee", newEmployee);
-
   useEffect(() => {
     const fetchEmployees = async () => {
       try {
@@ -45,7 +43,6 @@ function App() {
   }, []);
 
   const addNewEmployee = async (newEmployee) => {
-    console.log("addNewEmployee newEmployee", newEmployee);
     const id = employeeData.length
       ? employeeData[employeeData.length - 1].id + 1
       : 1;
@@ -53,7 +50,6 @@ function App() {
     const newEmployeeData = [...employeeData, employeeToAdd];
     setEmployeeData(newEmployeeData);
 
-    // Perform Create operation
     const postOptions = {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -65,14 +61,10 @@ function App() {
   };
 
   const updateEmployee = async (id) => {
-    console.log("updateEmployee id", id);
-    // const employeeToUpdate = employeeData.find((item) => item.id === id);
     const updatedEmployeeDate = employeeData.map((item) =>
       item.id === id ? { ...item, ...newEmployee } : item
     );
-    console.log("updateEmployee employeeToUpdate", updatedEmployeeDate);
 
-    // Perform Update operation
     const employeeToUpdate = updatedEmployeeDate.filter(
       (item) => item.id === id
     );
@@ -101,7 +93,6 @@ function App() {
   };
 
   const deleteEmployee = async (id) => {
-    console.log("deleteEmployee id", id);
     const newEmployeeData = employeeData.filter((item) => item.id !== id);
     setEmployeeData(newEmployeeData);
 
@@ -130,7 +121,6 @@ function App() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // console.log("handleSubmit newEmployee", newEmployee);
     if (!newEmployee) return;
     addNewEmployee(newEmployee);
     clearNewEmployee();
@@ -138,7 +128,6 @@ function App() {
 
   const handleUpdateSubmit = (event) => {
     event.preventDefault();
-    // console.log("handleUpdateSubmit newEmployee", newEmployee);
     if (!newEmployee) return;
     updateEmployee(newEmployee.id);
     clearNewEmployee();

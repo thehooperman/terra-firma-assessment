@@ -35,30 +35,6 @@
         "state": "WA",
         "postalCode": "98101"
       }
-    },
-    {
-      "firstName": "poi",
-      "lastName": "poi",
-      "phone": "123-456-7890",
-      "address": {
-        "streetAddress": "poi",
-        "city": "poi",
-        "state": "poi",
-        "postalCode": "poi"
-      },
-      "id": 4
-    },
-    {
-      "firstName": "poipoi",
-      "lastName": "poipoi",
-      "phone": "123-456-7890",
-      "address": {
-        "streetAddress": "poi",
-        "city": "poi",
-        "state": "poi",
-        "postalCode": "54345"
-      },
-      "id": 5
     }
   ]
 }

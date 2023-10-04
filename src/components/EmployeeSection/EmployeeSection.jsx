@@ -16,7 +16,6 @@ const EmployeeSection = ({
   return (
     <section className={styles.section}>
       <ul className={styles.list}>
-        {/* <li>{employee.id}</li> */}
         <li>{`${employee.lastName},  ${employee.firstName}`}</li>
         <li>{employee.phone}</li>
         <li>
