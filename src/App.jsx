@@ -5,17 +5,12 @@ import Employees from "./components/Employees/Employees";
 import ManageEmployees from "./components/ManageEmployees/ManageEmployees";
 import NoPage from "./components/NoPage/NoPage";
 import apiRequest from "./libs/apiRequest.Jsx";
-// import "./App.scss";
-// import { DataContext } from "./components/Context/DataContext";
 
 function App() {
   const API_URL = "http://localhost:3500/employees";
 
   const [employeeData, setEmployeeData] = useState([]);
   const [errorMessage, setErrorMessage] = useState(null);
-  const [isLoading, setIsLoading] = useState(false);
-  // const [showForm, setShowForm] = useState(false);
-
   const [newEmployee, setNewEmployee] = useState({
     firstName: "",
     lastName: "",
@@ -39,19 +34,14 @@ function App() {
         }
         const data = await response.json();
         setEmployeeData(data);
-        // console.table(data);
-
         setErrorMessage(null);
       } catch (error) {
         setErrorMessage(error.message);
       } finally {
-        setIsLoading(false);
+        console.log(errorMessage);
       }
     };
-    // * NOTE: Add setTimeout to simulate a slow network
-    // setTimeout(() => {
     (async () => await fetchEmployees())();
-    // }, 2000);
   }, []);
 
   const addNewEmployee = async (newEmployee) => {
@@ -168,11 +158,8 @@ function App() {
                   newEmployee={newEmployee}
                   setNewEmployee={setNewEmployee}
                   handleSubmit={handleSubmit}
-                  // updateEmployee={updateEmployee}
                   handleUpdateSubmit={handleUpdateSubmit}
                   deleteEmployee={deleteEmployee}
-                  // showForm={showForm}
-                  // setShowForm={setShowForm}
                 />
               }
             />

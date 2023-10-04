@@ -11,17 +11,10 @@ const ManageEmployees = ({
   newEmployee,
   setNewEmployee,
   handleSubmit,
-  // updateEmployee,
   handleUpdateSubmit,
   deleteEmployee,
-  // showForm,
-  // setShowForm,
 }) => {
   const [showForm, setShowForm] = useState(false);
-
-  // const handleShowForm = () => {
-  //   setShowForm(true);
-  // };
 
   console.log("ManageEmployees newEmployee", newEmployee);
 
